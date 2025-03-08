@@ -9,19 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <h2>🌍 Cartes Aéronautiques & Météo</h2>
+        <h2>✈️ Aviation METAR & Cartes</h2>
 
-        <label for="icao">Code ICAO de l'aéroport :</label>
+        <label for="icao">📍 Entrez un Code ICAO :</label>
         <input type="text" id="icao" placeholder="Ex: LFPG, JFK, LAX">
         
-        <button onclick="getMETAR()">Obtenir METAR/TAF</button>
-        <button onclick="resetFields()">Réinitialiser</button>
+        <button onclick="getMETAR()">📡 Obtenir METAR/TAF</button>
+        <button onclick="resetFields()">🔄 Réinitialiser</button>
 
-        <h3>Météo Aéroportuaire :</h3>
-        <p id="metar">METAR : ---</p>
-        <p id="taf">TAF : ---</p>
+        <h3>🌤 Météo Aéroportuaire :</h3>
+        <p id="metar">📡 METAR : ---</p>
+        <p id="taf">📜 TAF : ---</p>
 
-        <h3>Carte Aéronautique :</h3>
+        <h3>🗺️ Carte de l'Aéroport :</h3>
         <div id="map"></div>
     </div>
 

@@ -1,4 +1,4 @@
-// Clé API AVWX (Intégrée sans protection)
+// Clé API AVWX fournie
 const AVWX_API_KEY = "MqzhLhS6B6zgWiNhxeJ9s7bJqRXOlzoZV71dTO4-Ebo"; 
 
 // Initialisation de la carte avec Leaflet.js
@@ -21,17 +21,14 @@ async function getMETAR() {
     let tafUrl = `https://avwx.rest/api/taf/${icao}?token=${AVWX_API_KEY}`;
 
     try {
-        // Récupérer METAR
         let metarResponse = await fetch(metarUrl);
         let metarData = await metarResponse.json();
         document.getElementById("metar").innerText = `METAR : ${metarData.raw || "Données non disponibles"}`;
 
-        // Récupérer TAF
         let tafResponse = await fetch(tafUrl);
         let tafData = await tafResponse.json();
         document.getElementById("taf").innerText = `TAF : ${tafData.raw || "Données non disponibles"}`;
 
-        // Mise à jour de la carte
         updateMap(icao);
     } catch (error) {
         console.error("Erreur lors de la récupération des données METAR/TAF :", error);
