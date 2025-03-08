@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartes Aéronautiques et Météo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>🌍 Cartes Aéronautiques & Météo</h2>
+
+        <label for="icao">Code ICAO de l'aéroport :</label>
+        <input type="text" id="icao" placeholder="Ex: LFPG, JFK, LAX">
+        
+        <button onclick="getMETAR()">Obtenir METAR/TAF</button>
+        <button onclick="resetFields()">Réinitialiser</button>
+
+        <h3>Météo Aéroportuaire :</h3>
+        <p id="metar">METAR : ---</p>
+        <p id="taf">TAF : ---</p>
+
+        <h3>Carte Aéronautique :</h3>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
